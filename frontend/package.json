@@ -1,11 +1,4 @@
-"repository": {
-  "type": "git",
-  "url": "git+https://github.com/koagonzalo11/elparadisogonzalo-monorepo.git"
-},
-"bugs": {
-  "url": "https://github.com/koagonzalo11/elparadisogonzalo-monorepo/issues"
-},
-"homepage": "https://github.com/koagonzalo11/elparadisogonzalo-monorepo#readme"{
+{
   "name": "elparadisogonzalo-dapp",
   "version": "1.1.0",
   "description": "MetaMask-integrated dApp frontend for elparadisogonzalo",
@@ -21,5 +14,13 @@
     "elparadisogonzalo"
   ],
   "author": "koagonzalo11",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koagonzalo11/elparadisogonzalo-monorepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/koagonzalo11/elparadisogonzalo-monorepo/issues"
+  },
+  "homepage": "https://github.com/koagonzalo11/elparadisogonzalo-monorepo#readme"
 }
