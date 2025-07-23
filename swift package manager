@@ -1,0 +1,3 @@
+dependencies: [
+    .package(url: "https://github.com/koagonzalo11/ObjectivePGP.git", .upToNextMinor(from: "0.99.4"))
+]
