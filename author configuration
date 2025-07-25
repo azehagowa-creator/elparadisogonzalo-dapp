@@ -1,0 +1,9 @@
+# Set Git global identity for koagonzalo11 (owner/admin)
+git config --global user.name "koagonzalo11"
+git config --global user.email "genyoungclip@gmail.com"
+
+# Optional: Sign commits as owner/admin (skip if not using GPG)
+git config --global commit.gpgSign true
+
+# Optional: Set default branch to main
+git config --global init.defaultBranch main
