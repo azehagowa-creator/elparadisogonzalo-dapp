@@ -4,14 +4,14 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
 
   # Node.js / JavaScript
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 1000
     ignore:
       - dependency-name: "eslint"
         versions: ["<8.0.0"]
@@ -27,19 +27,19 @@ updates:
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
 
   # Terraform
   - package-ecosystem: "terraform"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
 
   # Ruby (Bundler/Gems)
   - package-ecosystem: "bundler"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
 
 # Optional global settings
-registries: {}
+registries: {0x4e8c73e7f243d12b7a5571200609523a4890beff}
