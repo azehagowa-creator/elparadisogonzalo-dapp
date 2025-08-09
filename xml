@@ -1,0 +1,7 @@
+import plistlib
+
+with open("yourfile.plist", "rb") as f:
+    data = plistlib.load(f)
+
+with open("output.xml", "wb") as f:
+    plistlib.dump(data, f, fmt=plistlib.FMT_XML)
