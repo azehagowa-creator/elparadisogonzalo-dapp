@@ -1,3 +1,0 @@
-dependencies: [
-    .package(url: "https://github.com/koagonzalo11/elparadisogonzalo-monorepo.git", .upToNextMinor(from: "1.0.0"))
-]
