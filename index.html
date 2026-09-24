@@ -1,109 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Elparadisogonzalo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050712">
+  <meta name="description" content="Elparadisogonzalo decentralized application">
+  <title>Elparadisogonzalo DApp</title>
+
+  <!-- Your existing CSS file -->
+  <link rel="stylesheet" href="./frontend">
+
   <style>
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #fefefe;
-      color: #333;
+      min-height: 100vh;
     }
+
+    .app {
+      width: min(1100px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0 60px;
+    }
+
     header {
-      background: #0a0a0a;
-      color: #fff;
-      padding: 20px 40px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 22px;
+      margin-bottom: 28px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(9, 13, 27, .82);
+      backdrop-filter: blur(16px);
     }
-    header h1 {
-      margin: 0;
-      font-size: 1.8em;
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: 18px;
     }
-    nav a {
-      color: #fff;
-      margin-left: 20px;
-      text-decoration: none;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .hero {
-      padding: 80px 40px;
-      text-align: center;
-      background: linear-gradient(to right, #00c6ff, #0072ff);
+
+    .logo {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--purple), var(--blue));
       color: white;
+      font-weight: 900;
     }
-    .hero h2 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
+
+    .connect {
+      border: 0;
+      border-radius: 12px;
+      padding: 11px 18px;
+      color: white;
+      background: linear-gradient(135deg, var(--purple), var(--blue));
+      cursor: pointer;
+      font-weight: 700;
     }
-    .section {
-      padding: 60px 40px;
-      max-width: 900px;
-      margin: auto;
+
+    .connect:hover {
+      opacity: .9;
     }
-    .section h3 {
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
-    .footer {
-      background: #111;
-      color: #aaa;
+
+    .hero {
       text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
+      padding: 55px 20px;
     }
-    @media (max-width: 600px) {
-      header, .hero, .section {
-        padding: 20px;
+
+    .hero h1 {
+      margin: 0 0 16px;
+      font-size: clamp(38px, 8vw, 76px);
+      line-height: 1;
+      background: linear-gradient(90deg, var(--purple), var(--cyan), var(--pink));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      max-width: 680px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(9, 13, 27, .82);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 17px;
+    }
+
+    .card p {
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 12px var(--green);
+    }
+
+    footer {
+      margin-top: 45px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    @media (max-width: 750px) {
+      header {
+        flex-direction: column;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
+
 <body>
+  <div class="app">
 
-  <header>
-    <h1>Elparadisogonzalo</h1>
-    <nav>
-      <a href="#story">Story</a>
-      <a href="#features">Features</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <header>
+      <div class="brand">
+        <div class="logo">E</div>
+        <span>Elparadisogonzalo</span>
+      </div>
 
-  <section class="hero">
-    <h2>Welcome to Elparadisogonzalo</h2>
-    <p>Your personal universe of creativity, connection, and code.</p>
-  </section>
+      <button class="connect" id="connectWallet">
+        Connect Wallet
+      </button>
+    </header>
 
-  <section class="section" id="story">
-    <h3>Our Story</h3>
-    <p>Elparadisogonzalo was born out of a passion for digital freedom, creative expression, and innovation. Whether you're exploring art, building apps, or unlocking the power of blockchain—this is your paradise.</p>
-  </section>
+    <main>
+      <section class="hero">
+        <div class="status">
+          <span class="dot"></span>
+          <span id="networkStatus">DApp ready</span>
+        </div>
 
-  <section class="section" id="features">
-    <h3>What You’ll Find Here</h3>
-    <ul>
-      <li>Beautiful, curated digital experiences</li>
-      <li>Decentralized tools and integrations</li>
-      <li>Creative media and unique interactions</li>
-      <li>Connected to Google, IPFS, and the open web</li>
-    </ul>
-  </section>
+        <h1>Elparadisogonzalo</h1>
 
-  <section class="section" id="contact">
-    <h3>Get in Touch</h3>
-    <p>Want to collaborate, connect, or just say hi?</p>
-    <p>Email: <a href="mailto:koa@elparadisogonzalo.com">koa@elparadisogonzalo.com</a></p>
-  </section>
+        <p>
+          A decentralized application interface for interacting with
+          blockchain contracts, Web3 wallets and decentralized services.
+        </p>
+      </section>
 
-  <footer class="footer">
-    &copy; 2025 Elparadisogonzalo. All rights reserved.
-  </footer>
+      <section class="grid">
 
+        <article class="card">
+          <h2>Wallet</h2>
+          <p id="walletAddress">
+            No wallet connected.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Network</h2>
+          <p id="network">
+            Detecting network...
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Smart Contract</h2>
+          <p>
+            Contract interaction can be connected here using your deployed
+            contract address and ABI.
+          </p>
+        </article>
+
+      </section>
+    </main>
+
+    <footer>
+      Elparadisogonzalo DApp · GPL-3.0
+    </footer>
+
+  </div>
+
+  <script>
+    const connectButton = document.getElementById("connectWallet");
+    const walletAddress = document.getElementById("walletAddress");
+    const network = document.getElementById("network");
+    const networkStatus = document.getElementById("networkStatus");
+
+    async function connectWallet() {
+      if (!window.ethereum) {
+        walletAddress.textContent =
+          "No Web3 wallet detected. Install or open a compatible wallet.";
+        return;
+      }
+
+      try {
+        const accounts = await window.ethereum.request({
+          method: "eth_requestAccounts"
+        });
+
+        if (accounts.length > 0) {
+          const address = accounts[0];
+
+          walletAddress.textContent =
+            address.slice(0, 6) + "..." + address.slice(-4);
+
+          connectButton.textContent = "Wallet Connected";
+          networkStatus.textContent = "Wallet connected";
+
+          const chainId = await window.ethereum.request({
+            method: "eth_chainId"
+          });
+
+          network.textContent = "Chain ID: " + chainId;
+        }
+      } catch (error) {
+        console.error(error);
+        walletAddress.textContent = "Wallet connection cancelled.";
+      }
+    }
+
+    connectButton.addEventListener("click", connectWallet);
+
+    if (window.ethereum) {
+      window.ethereum.on("accountsChanged", (accounts) => {
+        if (!accounts.length) {
+          walletAddress.textContent = "No wallet connected.";
+          connectButton.textContent = "Connect Wallet";
+          return;
+        }
+
+        walletAddress.textContent =
+          accounts[0].slice(0, 6) + "..." + accounts[0].slice(-4);
+      });
+
+      window.ethereum.on("chainChanged", (chainId) => {
+        network.textContent = "Chain ID: " + chainId;
+      });
+    }
+  </script>
 </body>
 </html>
