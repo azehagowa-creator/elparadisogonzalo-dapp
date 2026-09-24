@@ -1,0 +1,23 @@
+{
+  "name": "elparadisogonzalo-dapp",
+  "version": "1.2.2",
+  "description": "elparadisogonzalo-dapp",
+  "main": "editing.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elparadisogonzalo/elparadisogonzalo-dapp.git"
+  },
+  "author": "Elparadisogonzalo",
+  "license": "GPL-3.0",
+  "type": "module",
+  },
+  "homepage": "https://github.com/Elparadisogonzalo/elparadisogonzalo-dapp#readme",
+  "devDependencies": {
+    "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1"
+  }
+}
