@@ -1,19 +1,33 @@
 {
   "name": "elparadisogonzalo",
-  "version": "1.22",
-  "public": true,
+  "version": "1.22.0",
+  "private": true,
   "description": "El Paradiso Gonzalo website and dashboard",
   "homepage": "https://elparadisogonzalo.net",
   "license": "GPL-3.0",
   "type": "module",
   "scripts": {
-    "build": "mkdir -p dist && rollup -c && cp index.html dist/ && cp -r assets dist/",
+    "rollup": "rollup -c",
+    "webpack": "webpack --config webpack.config.cjs",
+    "build:rollup": "pnpm clean && pnpm rollup && cp index.html dist/",
+    "build:webpack": "pnpm clean && pnpm webpack && cp index.html dist/",
+    "build:python": "python3 -m compileall python",
+    "build": "pnpm build:rollup",
+    "build:all": "pnpm build:rollup && pnpm build:webpack && pnpm build:python",
+    "dev": "rollup -c -w",
     "deploy": "pnpm build && pnpm exec wrangler deploy"
   },
   "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "babel-loader": "^10.0.0",
     "crx3": "^2.0.0",
+    "css-loader": "^7.1.2",
     "rollup": "^4.63.4",
+    "style-loader": "^4.0.0",
     "typescript": "^7.0.2",
+    "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1",
     "wrangler": "^4.136.3"
   }
 }
