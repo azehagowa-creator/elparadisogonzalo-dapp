@@ -1,4 +1,5 @@
 const path = require("path");
+const fs = require("fs");
 
 module.exports = {
   mode: "production",
@@ -12,15 +13,6 @@ module.exports = {
   },
 
   module: {
-    rules: [
-      {
-        test: /\.html$/i,
-        use: "raw-loader"
-      },
-      {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"]
-      }
-    ]
+    rules: []
   }
 };
