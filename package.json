@@ -17,7 +17,7 @@
   "scripts": {
     "rollup": "rollup -c",
     "webpack": "webpack --config webpack.config.cjs",
-    "build:rollup": "pnpm clean && pnpm rollup && cp index.html dist/",
+    "build:rollup": "pnpm rollup && mkdir -p dist && cp index.html dist/",
     "build:webpack": "pnpm clean && pnpm webpack && cp index.html dist/",
     "build:python": "python3 -m compileall python",
     "build": "pnpm build:rollup",
