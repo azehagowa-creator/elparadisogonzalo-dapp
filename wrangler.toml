@@ -1,0 +1,58 @@
+# =============================================================================
+# wrangler.toml
+# Elparadisogonzalo production website
+# =============================================================================
+
+name = "elparadisogonzalo"
+
+compatibility_date = "2026-09-21"
+compatibility_flags = ["nodejs_compat", "l2s"]
+[previews]
+# Do not create a workers.dev URL for production.
+workers_dev = false
+
+# =============================================================================
+# ASSETS
+# =============================================================================
+# Vite/build output
+#
+# Your production files should exist in:
+#   ./dist/
+#
+# Enviroment:
+#   ./dist/index.html
+#   ./dist/...
+#
+[assets]
+directory = "./dist"
+
+# =============================================================================
+# PRODUCTION DOMAIN
+# =============================================================================
+# Cloudflare Custom Domain.
+#
+# Cloudflare manages the DNS record and TLS certificate for this hostname.
+# This is preferable to manually managing certificates for the Worker.
+#
+[[routes]]
+pattern = "elparadisogonzalo.net"
+custom_domain = true
+
+[[routes]]
+pattern = "www.elparadisogonzalo.net"
+custom_domain = true
+
+# =============================================================================
+# OBSERVABILITY
+# =============================================================================
+
+[observability]
+enabled = true
+head_sampling_rate = 1
+
+# =============================================================================
+# DEPLOYMENT / SOURCE MAPS
+# =============================================================================
+
+
+# Keep this Wrangler file as the source of truth for variables/configuration.

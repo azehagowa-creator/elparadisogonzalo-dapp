@@ -1,25 +1,19 @@
 {
-  "name": "elparadisogonzalo-dapp",
-  "version": "1.2.2",
-  "description": "elparadisogonzalo-dapp",
-  "main": "editing.js",
+  "name": "elparadisogonzalo",
+  "version": "1.0.0",
+  "public": true,
+  "description": "El Paradiso Gonzalo website and dashboard",
+  "homepage": "https://elparadisogonzalo.net",
+  "license": "Apache-2.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "mkdir -p dist && rollup -c && cp index.html dist/ && cp -r assets dist/",
+    "deploy": "pnpm build && pnpm exec wrangler deploy"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/azehagowa-creator/elparadisogonzalo-dapp.git"
-  },
-  "author": "Elparadisogonzalo",
-  "license": "GPL-3.0",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/azehagowa-creator/elparadisogonzalo-dapp/issues"
-  },
-  "homepage": "https://elparadisogonzalo.com",
   "devDependencies": {
-    "webpack": "^5.101.3",
-    "webpack-cli": "^6.0.1"
+    "crx3": "^2.0.0",
+    "rollup": "^4.63.4",
+    "typescript": "^7.0.2",
+    "wrangler": "^4.136.3"
   }
 }
