@@ -4,7 +4,7 @@
   "public": true,
   "description": "El Paradiso Gonzalo website and dashboard",
   "homepage": "https://elparadisogonzalo.net",
-  "license": "Apache-2.0",
+  "license": "GPL-3.0",
   "type": "module",
   "scripts": {
     "build": "mkdir -p dist && rollup -c && cp index.html dist/ && cp -r assets dist/",
