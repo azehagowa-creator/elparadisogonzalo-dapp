@@ -1,11 +1,19 @@
 {
   "name": "elparadisogonzalo",
   "version": "1.22.0",
-  "private": true,
   "description": "El Paradiso Gonzalo website and dashboard",
   "homepage": "https://elparadisogonzalo.net",
+  "bugs": {
+    "url": "https://github.com/azehagowa-creator/elparadisogonzalo-dapp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elparadisogonzalo/elparadisogonzalo-dapp.git"
+  },
   "license": "GPL-3.0",
+  "author": "Elparadisogonzalo",
   "type": "module",
+  "main": "rollup.config.js",
   "scripts": {
     "rollup": "rollup -c",
     "webpack": "webpack --config webpack.config.cjs",
@@ -29,5 +37,6 @@
     "webpack": "^5.101.3",
     "webpack-cli": "^6.0.1",
     "wrangler": "^4.136.3"
-  }
+  },
+  "public": true
 }
